@@ -121,15 +121,15 @@
 	</licenses>
 
 	<scm>
-		<url>https://github.com/blockchain-jd-com/bftsmart.git</url>
-		<connection>https://github.com/blockchain-jd-com/bftsmart.git</connection>
-		<developerConnection>https://github.com/blockchain-jd-com/bftsmart.git</developerConnection>
+		<url>https://github.com/LeolichN/bftsmart.git</url>
+		<connection>https://github.com/LeolichN/bftsmart.git</connection>
+		<developerConnection>https://github.com/LeolichN/bftsmart.git</developerConnection>
 	</scm>
 	<developers>
 		<developer>
 			<name>jdchain</name>
 			<email>git-jdchain@jd.com</email>
-			<url>https://github.com/blockchain-jd-com/jdchain.git</url>
+			<url>https://github.com/LeolichN/jdchain.git</url>
 		</developer>
 	</developers>
 
