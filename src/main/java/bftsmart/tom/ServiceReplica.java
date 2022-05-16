@@ -411,10 +411,6 @@ public class ServiceReplica {
 			noop = true;
 			for (TOMMessage request : requestsFromConsensus) {
 
-				LOGGER.debug(
-						"(ServiceReplica.receiveMessages) Processing TOMMessage from client {} with sequence number {} for session {} decided in consensus {}, request = {}",
-						request.getSender(), request.getSequence(), request.getSession(), consId[consensusCount], Base58Utils.encode(request.getContent()));
-
 				LOGGER.info(
 						"(ServiceReplica.receiveMessages) request view id = {}, curr view id = {}, request type = {}",
 						request.getViewID(), serverViewController.getCurrentViewId(), request.getReqType());
@@ -716,8 +712,8 @@ public class ServiceReplica {
 
 					View replyView = new View(view.getId(), view.getProcesses(), view.getF(),
 							addressesTemp.toArray(new NodeNetwork[addressesTemp.size()]));
-					LOGGER.info("I am proc {}, view = {}, hashCode = {}, reply View = {}",
-							this.serverViewController.getStaticConf().getProcessId(), view, view.hashCode(), replyView);
+					LOGGER.info("I am proc {}, view = {}, reply View = {}",
+							this.serverViewController.getStaticConf().getProcessId(), view, replyView);
 
 					request.reply = new TOMMessage(id, request.getSession(), request.getSequence(),
 							request.getOperationId(), asyncResponseLinkedList.get(index), TOMUtil.getBytes(replyView),
